@@ -4,6 +4,7 @@ createApp({
   data() {
     return {
       titolo: "PROVA INTERPOLAZIONE",
+      apiData: [],
     };
   },
   methods: {},
@@ -13,8 +14,11 @@ createApp({
       this.titolo
     );
 
-    axios.get("./api.php").then((item) => {
-      console.log("Questo è il contenuto della tua richiesta API: ", item);
+    axios.get("./api.php").then((response) => {
+      console.log("Questo è il contenuto della tua richiesta API: ", response);
+      this.apiData = response.data;
     });
+
+    console.log("Il valore salvato nel data dopo la chiamata è", this.apiData);
   },
 }).mount("#app");

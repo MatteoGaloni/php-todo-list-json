@@ -16,6 +16,9 @@
         <div class="container">
             <h1>Test Vue in Php</h1>
             <h2>{{titolo}}</h2>
+            <ul>
+                <li v-for="item in apiData">{{item}}</li>
+            </ul>
             <div>
                 <input class="me-1" v-model="titolo" type="text">
                 <button class="btn btn-warning">Clicca qui</button>
