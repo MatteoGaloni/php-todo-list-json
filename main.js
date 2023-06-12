@@ -3,11 +3,16 @@ const { createApp } = Vue;
 createApp({
   data() {
     return {
-      titolo: "PROVA INTERPOLAZIONE",
+      newItem: "",
       apiData: [],
     };
   },
-  methods: {},
+  methods: {
+    addItem() {
+      this.apiData.push(this.newItem);
+      this.newItem = "";
+    },
+  },
   mounted() {
     console.log(
       "Mounted Ok, ti mostro il contenuto del data (titolo)->",

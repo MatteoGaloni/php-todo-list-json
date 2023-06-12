@@ -20,9 +20,12 @@
                 <li v-for="item in apiData">{{item}}</li>
             </ul>
             <div>
-                <input class="me-1" v-model="titolo" type="text">
-                <button class="btn btn-warning">Clicca qui</button>
+                <input @keyup.enter="addItem()" class="me-1" v-model="newItem" type="text">
+                <button @click="addItem()" class="btn btn-warning">Aggiungi elemento all'array</button>
             </div>
+            <ul>
+
+            </ul>
         </div>
     </div>
 
