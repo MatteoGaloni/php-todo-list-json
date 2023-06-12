@@ -15,7 +15,7 @@
     <div id="app">
         <div class="container">
             <h1>Test Vue in Php</h1>
-            <h2>{{titolo}}</h2>
+            <h2>Risposta a chiamata API:</h2>
             <ul>
                 <li v-for="item in apiData">{{item}}</li>
             </ul>
