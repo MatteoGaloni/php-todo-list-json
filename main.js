@@ -12,5 +12,9 @@ createApp({
       "Mounted Ok, ti mostro il contenuto del data (titolo)->",
       this.titolo
     );
+
+    axios.get("./api.php").then((item) => {
+      console.log("Questo è il contenuto della tua richiesta API: ", item);
+    });
   },
 }).mount("#app");
