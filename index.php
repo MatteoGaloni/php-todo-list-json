@@ -5,13 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToDo-PHP</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.scss">
     <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
 </head>
 
 <body>
     <div id="app">
-        <h1>Test Vue in Php</h1>
-        <h2>{{titolo}}</h2>
+        <div class="container">
+            <h1>Test Vue in Php</h1>
+            <h2>{{titolo}}</h2>
+            <div>
+                <input class="me-1" v-model="titolo" type="text">
+                <button class="btn btn-warning">Clicca qui</button>
+            </div>
+        </div>
     </div>
 
 
