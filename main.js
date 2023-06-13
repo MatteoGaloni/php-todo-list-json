@@ -29,7 +29,7 @@ createApp({
         })
         .then((response) => {
           this.apiData = response.data;
-          console.log("risultato di apiData con POST", this.apiData);
+          console.log("risultato di apiData con POST", this.response);
         });
     },
   },
