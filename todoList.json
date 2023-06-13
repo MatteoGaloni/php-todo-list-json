@@ -1,1 +1,34 @@
-[{"task":"Fare la spesa","isDone":false},{"task":"Lavare la macchina","isDone":true},{"task":"Stendere il bucato","isDone":false},{"task":"andare al mare","isDone":"false"},{"task":"uscire","isDone":"false"},{"task":"mmomo","isDone":"false"},{"task":"ciao","isDone":"false"}]
+[
+    {
+        "task": "Lavare la macchina",
+        "isDone": false
+    },
+    {
+        "task": "Stendere il bucato",
+        "isDone": false
+    },
+    {
+        "task": "andare al mare",
+        "isDone": true
+    },
+    {
+        "task": "uscire",
+        "isDone": true
+    },
+    {
+        "task": "mmomo",
+        "isDone": false
+    },
+    {
+        "task": "ciao",
+        "isDone": false
+    },
+    {
+        "task": "hola",
+        "isDone": false
+    },
+    {
+        "task": "test",
+        "isDone": true
+    }
+]

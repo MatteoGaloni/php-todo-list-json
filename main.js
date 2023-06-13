@@ -24,6 +24,11 @@ createApp({
       this.sendData(data);
     },
 
+    changeIsDone(i) {
+      const data = { changeIsDone: i };
+      this.sendData(data);
+    },
+
     sendData(data) {
       // this.apiData.push(this.newItem);
       // this.newItem = "";
@@ -36,11 +41,6 @@ createApp({
           console.log("risultato di apiData con POST", response.data);
           this.apiData = response.data;
         });
-    },
-
-    changeIsDone(i) {
-      console.log("hai cliccato il task num: ", i);
-      this.apiData.isDone = false;
     },
   },
   mounted() {

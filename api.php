@@ -9,6 +9,13 @@ $todoList = json_decode($todoListJson, true);
 if (isset($_POST["newItem"])) {
     $todoList[] = $_POST["newItem"];
     file_put_contents("todoList.json", json_encode($todoList));
+} else if (isset($_POST["changeIsDone"])) {
+    $i = $_POST["changeIsDone"];
+    $todoList[$i]["isDone"] = !$todoList[$i]["isDone"];
+
+
+
+    file_put_contents("todoList.json", json_encode($todoList));
 }
 
 
