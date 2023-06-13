@@ -24,12 +24,12 @@ createApp({
       // this.newItem = "";
       const data = { newItem: this.newItem };
       axios
-        .post("./api.php", data, {
+        .post("api.php", data, {
           headers: { "Content-Type": "multipart/form-data" },
         })
         .then((response) => {
+          console.log("risultato di apiData con POST", response.data);
           this.apiData = response.data;
-          console.log("risultato di apiData con POST", this.response);
         });
     },
   },
