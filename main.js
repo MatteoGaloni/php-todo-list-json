@@ -4,7 +4,7 @@ createApp({
   data() {
     return {
       titolo: "PROVA - PROVA",
-      newItem: { task: "Tagliare il prato", isDone: false },
+      newItem: { task: "", isDone: false },
       apiData: [],
     };
   },
