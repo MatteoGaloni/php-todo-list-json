@@ -19,12 +19,12 @@
             <h2>Risposta a chiamata API:</h2>
             <div>
                 <ul>
-                    <li :class="(item.isDone) ? 'striked' : '' " v-for="item in apiData">{{item.task}}</li>
+                    <li @click="changeIsDone(i)" :class="(item.isDone) ? 'striked' : '' " v-for="(item, i) in apiData">{{item.task}}</li>
                 </ul>
             </div>
             <div>
-                <input @keyup.enter="addItem()" class="me-1" v-model="newItem.task" type="text">
-                <button @click="addItem()" class="btn btn-warning">Aggiungi elemento all'array</button>
+                <input @keyup.enter="addNewItem()" class="me-1" v-model="newItem.task" type="text">
+                <button @click="addNewItem()" class="btn btn-warning">Aggiungi elemento all'array</button>
             </div>
 
         </div>
