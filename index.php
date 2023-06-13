@@ -11,25 +11,23 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
 </head>
 
-<body>
+<body class="bg-dark">
     <div id="app">
-        <div class="container">
+        <div class="container bg-danger mt-3">
             <h1>Test Vue in Php</h1>
             <h2>Risposta a chiamata API:</h2>
-            <ul>
-                <li v-for="item in apiData">{{item}}</li>
-            </ul>
+            <div>
+                <ul>
+                    <li :class="(item.isDone) ? 'striked' : 'notStriked' " v-for="item in apiData">{{item.task}}</li>
+                </ul>
+            </div>
             <div>
                 <input @keyup.enter="addItem()" class="me-1" v-model="newItem" type="text">
                 <button @click="addItem()" class="btn btn-warning">Aggiungi elemento all'array</button>
             </div>
-            <ul>
 
-            </ul>
         </div>
     </div>
-
-
     <script src="./main.js"></script>
 </body>
 
