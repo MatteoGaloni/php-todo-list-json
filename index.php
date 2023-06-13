@@ -22,7 +22,7 @@
                 </ul>
             </div>
             <div>
-                <input @keyup.enter="addItem()" class="me-1" v-model="newItem" type="text">
+                <!-- <input @keyup.enter="addItem()" class="me-1" v-model="newItem" type="text"> -->
                 <button @click="addItem()" class="btn btn-warning">Aggiungi elemento all'array</button>
             </div>
 
