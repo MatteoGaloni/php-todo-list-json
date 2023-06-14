@@ -4,7 +4,7 @@ createApp({
   data() {
     return {
       titolo: "PROVA - PROVA",
-      newItem: { task: "", isDone: false },
+      newItem: "",
       apiData: [],
     };
   },
@@ -21,6 +21,11 @@ createApp({
 
     addNewItem() {
       const data = { newItem: this.newItem };
+      this.sendData(data);
+    },
+
+    removeItem(i) {
+      const data = { removeItem: i };
       this.sendData(data);
     },
 
@@ -41,6 +46,7 @@ createApp({
           console.log("risultato di apiData con POST", response.data);
           this.apiData = response.data;
         });
+      this.newItem = "";
     },
   },
   mounted() {
