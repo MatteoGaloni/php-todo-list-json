@@ -14,24 +14,28 @@
 
 <body class="bg-dark">
     <div id="app">
-        <div class="container bg-danger mt-3">
-            <h1>Test Vue in Php</h1>
-            <h2>Risposta a chiamata API:</h2>
-            <div>
-                <ul>
-                    <li v-for="(item, i) in apiData">
-                        <div @click="changeIsDone(i)" :class="(item.isDone) ? 'striked' : '' ">{{item.task}}</div>
-                        <div>
+        <div class="container mt-3" style="width: 30rem;">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="card-title">ToDo List php</h1>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item list-group-item-danger" v-for="(item, i) in apiData">
+                            <div class="d-flex">
+                                <h5 @click="changeIsDone(i)" :class="(item.isDone) ? 'striked' : '' ">{{item.task}}</h5>
+                                <input class="ms-3" type="checkbox" @click="changeIsDone(i)">
+                            </div>
+                            <div class="input-group mb-3">
+                                <input class="form-control" v-model="apiData[i].task" type="text">
+                            </div>
                             <button @click="removeItem(i)" class="btn btn-success">Remove Item</button>
-                        </div>
-                    </li>
-                </ul>
+                        </li>
+                    </ul>
+                    <div class="input-group my-3">
+                        <input placeholder="Inserisci una nuova attività" class="form-control" @keyup.enter="addNewItem()" v-model="newItem" type="text">
+                    </div>
+                    <button @click="addNewItem()" class="btn btn-warning">Aggiungi</button>
+                </div>
             </div>
-            <div>
-                <input @keyup.enter="addNewItem()" class="me-1" v-model="newItem" type="text">
-                <button @click="addNewItem()" class="btn btn-warning">Aggiungi elemento all'array</button>
-            </div>
-
         </div>
     </div>
     <script src="./main.js"></script>
